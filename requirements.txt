@@ -4,5 +4,4 @@ einops==0.7.0
 git+https://github.com/tatsy/torchmcubes.git
 trimesh==4.0.5
 rembg
-huggingface-hub
 imageio[ffmpeg]
