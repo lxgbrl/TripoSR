@@ -126,8 +126,8 @@ class TSR(BaseModule):
         elevation_deg: float = 0.0,
         camera_distance: float = 1.9,
         fovy_deg: float = 40.0,
-        height: int = 256,
-        width: int = 256,
+        height: int = 512,
+        width: int = 512,
         return_type: str = "pil",
     ):
         rays_o, rays_d = get_spherical_cameras(
@@ -168,7 +168,7 @@ class TSR(BaseModule):
             return
         self.isosurface_helper = MarchingCubeHelper(resolution)
 
-    def extract_mesh(self, scene_codes, resolution: int = 256, threshold: float = 25.0):
+    def extract_mesh(self, scene_codes, resolution: int = 512, threshold: float = 25.0):
         self.set_marching_cubes_resolution(resolution)
         meshes = []
         for scene_code in scene_codes:
